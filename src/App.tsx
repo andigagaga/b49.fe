@@ -93,76 +93,75 @@ export default class DataForm extends React.Component<{}, FormState> {
 
     return (
       <React.Fragment>
-      <div className="container mt-5 ">
-      <form action="" className="w-50 mx-auto ">
-        <h5 className="text-center my-5">Where Do You Live?</h5>
-        <div className="mb-3">
-          <p>Provinces</p>
-          <select
-            className="form-control"
-            onChange={this.handleProvinceChange}
-            value={this.state.selectedProvince}
-          >
-            <option value="">Select Province</option>
-            {provinces.map((province) => (
-              <option key={province.id} value={province.id}>
-                {province.name}
-              </option>
-            ))}
-          </select>
+        <div className="container  ">
+          <form action="" className="w-50 mx-auto p-5 bg-secondary mt-4 rounded">
+            <h5 className="text-center my-5 fw-bolder text-decoration-underline">Where Do You Live ?</h5>
+            <div className="mb-3">
+              <p>Provinces</p>
+              <select
+                className="form-control"
+                onChange={this.handleProvinceChange}
+                value={this.state.selectedProvince}
+              >
+                <option value="">Select Province</option>
+                {provinces.map((province) => (
+                  <option key={province.id} value={province.id}>
+                    {province.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="mb-3">
+              <p>Regencies</p>
+              <select
+                className="form-control"
+                onChange={this.handleRegencyChange}
+                value={this.state.selectedRegency}
+              >
+                <option value="">Select Regencies</option>
+                {regencies.map((regencie) => (
+                  <option key={regencie.id} value={regencie.id}>
+                    {regencie.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="mb-3">
+              <p>District</p>
+              <select
+                className="form-control"
+                onChange={this.handleDistrictChange}
+                value={this.state.selectedDistrict}
+              >
+                <option value="">Select District</option>
+                {districts.map((district) => (
+                  <option key={district.id} value={district.id}>
+                    {district.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="mb-3">
+              <p>Village</p>
+              <select
+                className="form-control"
+                onChange={this.handleVillageChange}
+                value={this.state.selectedVillage}
+              >
+                <option value="">Select Village</option>
+                {villages.map((village) => (
+                  <option key={village.id} value={village.id}>
+                    {village.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </form>
         </div>
-    
-        <div className="mb-3">
-          <p>Regencies</p>
-          <select
-            className="form-control"
-            onChange={this.handleRegencyChange}
-            value={this.state.selectedRegency}
-          >
-            <option value="">Select Regencies</option>
-            {regencies.map((regencie) => (
-              <option key={regencie.id} value={regencie.id}>
-                {regencie.name}
-              </option>
-            ))}
-          </select>
-        </div>
-    
-        <div className="mb-3">
-          <p>District</p>
-          <select
-            className="form-control"
-            onChange={this.handleDistrictChange}
-            value={this.state.selectedDistrict}
-          >
-            <option value="">Select District</option>
-            {districts.map((district) => (
-              <option key={district.id} value={district.id}>
-                {district.name}
-              </option>
-            ))}
-          </select>
-        </div>
-    
-        <div className="mb-3">
-          <p>Village</p>
-          <select
-            className="form-control"
-            onChange={this.handleVillageChange}
-            value={this.state.selectedVillage}
-          >
-            <option value="">Select Village</option>
-            {villages.map((village) => (
-              <option key={village.id} value={village.id}>
-                {village.name}
-              </option>
-            ))}
-          </select>
-        </div>
-      </form>
-    </div>
-    </React.Fragment>
-    
+      </React.Fragment>
     );
   }
 }
