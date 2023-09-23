@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom"
-
-export default class Props extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div>
@@ -19,18 +17,7 @@ class Partai extends React.Component<{partai:string}, { value: string }> {
 
     return (
       <div>
-        <center>
         <h1>{partai}</h1>
-        <Link to={"/"} >
-                        <button>Home</button>
-                    </Link>
-                    <Link to={"/components"} >
-                        <button>Components</button>
-                    </Link>
-                    <Link to={"/props"} >
-                        <button>Props</button>
-                    </Link>
-        </center>
       </div>
     );
   }
