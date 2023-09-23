@@ -1,12 +1,28 @@
 import React from "react";
-import Perjuangan from "./Pdip";
 
-class App extends React.Component{
+type State = {
+    doksly: string
+}
+
+export default class App extends React.Component{
+
+    state: State = {
+        doksly: "andi itus"
+    }
+
+    updateDoksly = () => {
+        this.setState({
+            doksly: "ganteng"
+        })
+    }
     render(){
         return(
-            <div>
-                <Perjuangan />
-            </div>
+           <React.Fragment>
+            <div>{this.state.doksly}</div>
+
+            <button onClick={this.updateDoksly}>sebenernya</button>
+           
+           </React.Fragment>
         )
     }
-} export default App;
+} 
