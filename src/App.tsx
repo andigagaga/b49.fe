@@ -1,28 +1,24 @@
 import React from "react";
 
-type State = {
-    doksly: string
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <div>Partai</div>
+        <Partai partai={"partai komunis bhahaha indonesia"} />
+      </div>
+    );
+  }
 }
 
-export default class App extends React.Component{
+class Partai extends React.Component<{partai:string}, { value: string }> {
+  render() {
+    const { partai } = this.props;
 
-    state: State = {
-        doksly: "andi itus"
-    }
-
-    updateDoksly = () => {
-        this.setState({
-            doksly: "ganteng"
-        })
-    }
-    render(){
-        return(
-           <React.Fragment>
-            <div>{this.state.doksly}</div>
-
-            <button onClick={this.updateDoksly}>sebenernya</button>
-           
-           </React.Fragment>
-        )
-    }
-} 
+    return (
+      <div>
+        <h1>{partai}</h1>
+      </div>
+    );
+  }
+}
